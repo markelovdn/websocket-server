@@ -1,7 +1,12 @@
 {
     "authHost": "backend",
-    "authEndpoint": "/broadcasting/auth",
-    "clients": [],
+    "authEndpoint": "/api/broadcasting/auth",
+    "clients": [
+      {
+        "appId": "1",
+        "key": "any_secret_key"
+    }
+    ],
     "database": "redis",
     "databaseConfig": {
       "redis": {
@@ -10,8 +15,17 @@
       }
     },
     "devMode": true,
-    "port": "6001",
     "host": "0.0.0.0",
-    "protocol": "http"
-  }
-  
+    "port": "6001",
+    "protocol": "http",
+    "socketio": {},
+    "sslCertPath": "",
+    "sslKeyPath": "",
+    "sslCertChainPath": "",
+    "sslPassphrase": "",
+    "subscribers": {
+        "http": true,
+        "redis": true
+    },
+    "verifySelfSigned": false
+  }  
